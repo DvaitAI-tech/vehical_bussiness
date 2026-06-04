@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partnership Charter — Delhi Cab Venture (Draft v1)</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C97A;
+    --dark: #0A0A0F; --dark2: #111118; --dark3: #1A1A24;
+    --white: #F5F3EE; --muted: #8A8A9A;
+    --green: #4CAF84; --red: #E05A5A; --accent: #5B8CFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--dark); color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.7; overflow-x: hidden; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(10,10,15,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,168,76,0.15); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--gold); letter-spacing: 1px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.back { color: var(--gold); }
+
+  .hero { min-height: 78vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 130px 48px 70px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.08) 0%, transparent 70%); }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(91,140,255,0.1); border: 1px solid rgba(91,140,255,0.3); border-radius: 100px; padding: 8px 20px; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 7vw, 76px); font-weight: 900; line-height: 1.04; letter-spacing: -2px; margin-bottom: 18px; }
+  .hero h1 span { display: block; background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero-sub { font-size: clamp(15px, 2vw, 19px); color: var(--muted); max-width: 640px; margin: 0 auto; font-weight: 300; }
+
+  section { padding: 72px 48px; max-width: 1000px; margin: 0 auto; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+  .section-label::after { content: ''; flex: 1; max-width: 48px; height: 1px; background: var(--gold); opacity: 0.4; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3.4vw, 38px); font-weight: 700; line-height: 1.15; margin-bottom: 28px; letter-spacing: -0.5px; }
+
+  .rule { display: flex; gap: 18px; background: var(--dark2); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px 24px; margin-bottom: 12px; align-items: flex-start; transition: border-color 0.2s, background 0.2s; }
+  .rule:hover { border-color: rgba(201,168,76,0.25); background: var(--dark3); }
+  .rule-num { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gold); font-weight: 700; min-width: 38px; line-height: 1.5; }
+  .rule-body { flex: 1; }
+  .rule-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 5px; }
+  .rule-title { font-size: 15px; font-weight: 600; }
+  .rule-text { font-size: 13.5px; color: rgba(245,243,238,0.72); }
+  .tag { font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; font-weight: 600; }
+  .tag.core { background: rgba(201,168,76,0.12); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+  .tag.add  { background: rgba(91,140,255,0.12); color: var(--accent); border: 1px solid rgba(91,140,255,0.3); }
+
+  .legend { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 8px; font-size: 13px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+
+  .note { padding: 16px 22px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; font-size: 13.5px; color: var(--muted); }
+  .note.warn { border-color: rgba(224,90,90,0.25); background: rgba(224,90,90,0.04); }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent); margin: 0 48px; }
+
+  .fade-up { opacity: 0; transform: translateY(26px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  .signoff { max-width: 1000px; margin: 0 auto; padding: 56px 48px 80px; }
+  .sign-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 24px; }
+  .sign-box { background: var(--dark2); border: 1px dashed rgba(201,168,76,0.3); border-radius: 12px; padding: 22px; text-align: center; }
+  .sign-line { height: 1px; background: rgba(255,255,255,0.15); margin: 28px 12px 8px; }
+  .sign-cap { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  footer { text-align: center; padding: 32px; font-size: 12px; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.05); }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; } .nav-links { display: none; }
+    section, .signoff { padding-left: 22px; padding-right: 22px; }
+    .sign-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Partnership Charter</div>
+  <ul class="nav-links">
+    <li><a href="#members">Members</a></li>
+    <li><a href="#money">Money</a></li>
+    <li><a href="#trial">6-Month Test</a></li>
+    <li><a href="#ops">Operations</a></li>
+    <li><a href="#governance">Governance</a></li>
+    <li><a href="index.html" class="back">← Proposal</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Draft v1 · Open to Everyone's Feedback</div>
+  <h1>The Rules to<br><span>Join & Run This Together</span></h1>
+  <p class="hero-sub">A starting set of fair, clear rules for how 3–6 of us enter the venture, put in money, share profit, run the cab, and make decisions. This is a living document — nothing here is final until we all discuss and agree.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- HOW TO READ -->
+<section style="padding-top:48px;padding-bottom:24px;">
+  <div class="legend fade-up">
+    <span><span class="tag core">Draft v1</span> rules we started with</span>
+    <span><span class="tag add">Proposed</span> added for fairness — to be voted on</span>
+  </div>
+  <div class="note fade-up" style="margin-top:14px;">📌 These are working rules to <strong style="color:var(--white);">get started</strong> and <strong style="color:var(--white);">can be changed</strong> by group agreement at any time. Once we settle them, they should be written into a proper <strong style="color:var(--white);">partnership deed</strong> (and ideally checked by a lawyer) so they're legally binding.</div>
+</section>
+
+<!-- 1. MEMBERS & OWNERSHIP -->
+<section id="members" style="padding-top:32px;">
+  <div class="section-label">Section 1</div>
+  <h2 class="section-title">Membership & Ownership</h2>
+
+  <div class="rule fade-up"><div class="rule-num">1</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Team size: 3 to 6 people</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">The first car is started by a team of <strong style="color:var(--white);">3–6 members</strong>, depending on who is genuinely interested and committed.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">2</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Whose name the car is in</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">The first car can be registered in <strong style="color:var(--white);">one member's name</strong> (for faster loan/approval). If any member is not comfortable with that, we register it in <strong style="color:var(--white);">everyone's name / jointly</strong> instead.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">3</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">A common bank account</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">We open a <strong style="color:var(--white);">joint account</strong> to collect and spend the venture's money — or a single account that <strong style="color:var(--white);">every member can check</strong> at any time. All cab income goes here; all expenses come from here.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">4</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Put it in writing</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Once these rules are agreed, sign a simple <strong style="color:var(--white);">partnership deed</strong> covering shares, profit split, roles and exit. Until then, this charter is our informal understanding.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">5</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Adding new members later</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">A new member can join only with the <strong style="color:var(--white);">agreement of all existing members</strong>, and on the same share/investment terms decided at that time.</div>
+  </div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 2. MONEY -->
+<section id="money">
+  <div class="section-label">Section 2</div>
+  <h2 class="section-title">Money: Investment & Profit</h2>
+
+  <div class="rule fade-up"><div class="rule-num">6</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Prefer the zero down-payment option</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">We try to take a <strong style="color:var(--white);">0 down-payment</strong> loan. The group jointly pays the <strong style="color:var(--white);">EMI + driver cost</strong> until the car itself earns enough to cover its own running cost.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">7</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">If zero-down isn't available</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">We split the required amount among members — <strong style="color:var(--white);">equally or share-wise</strong>. Profit is then shared <strong style="color:var(--white);">in proportion to investment</strong>: less money in = smaller profit share (and proportionally more of any loss) 🙂</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">8</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Emergency reserve</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">Always keep at least <strong style="color:var(--white);">₹20,000–30,000</strong> in the common account as a buffer for unfortunate events (repairs, fines, a missed EMI, accident downtime).</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">9</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">When profit is shared out</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Profit is distributed (monthly or quarterly) <strong style="color:var(--white);">only after</strong> the EMI, driver, running costs and the emergency reserve are fully covered. During the loan period we may keep/reinvest most profit toward stability or the next car.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">10</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">If extra money is needed (capital call)</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">If the car needs more funds than it earns (big repair, EMI shortfall), members top up <strong style="color:var(--white);">in proportion to their share</strong>. A member who can't or won't contribute has their share reduced accordingly.</div>
+  </div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 3. THE 6-MONTH TEST -->
+<section id="trial">
+  <div class="section-label">Section 3</div>
+  <h2 class="section-title">The 6-Month Test & Exit</h2>
+
+  <div class="rule fade-up"><div class="rule-num">11</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Review at 6 months</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">We run and observe for the <strong style="color:var(--white);">first 6 months</strong>. If by then the car can cover its running cost → we continue. If not → we <strong style="color:var(--white);">jointly discuss</strong>, and may drop the plan and <strong style="color:var(--white);">sell the car, accepting whatever loss</strong> comes.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">12</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Define "covers its cost" clearly</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">To avoid arguments later, agree a number now — e.g. <strong style="color:var(--white);">the car earns at least EMI + driver + fuel + maintenance for 2 consecutive months</strong> counts as "covering running cost."</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">13</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">How we exit if it fails</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">The decision to sell needs a <strong style="color:var(--white);">majority vote</strong>. Any loss on sale (and any remaining loan) is shared <strong style="color:var(--white);">in proportion to each member's investment</strong>.</div>
+  </div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 4. OPERATIONS -->
+<section id="ops">
+  <div class="section-label">Section 4</div>
+  <h2 class="section-title">Running the Cab & the Driver</h2>
+
+  <div class="rule fade-up"><div class="rule-num">14</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Hiring the driver</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">Hire a driver at <strong style="color:var(--white);">₹15,000 + incentive</strong>, with <strong style="color:var(--white);">2 or more years</strong> of driving experience. Pay on time — a reliable driver is the most important part of this business.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">15</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Keep all papers valid</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Commercial insurance, permit, fitness and pollution certificates are <strong style="color:var(--white);">always kept up to date</strong>, renewed from the common fund. One member is responsible for tracking renewal dates.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">16</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Fines, accidents & damage</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Genuine challans and accident costs are paid from the common fund / insurance. Damage caused by <strong style="color:var(--white);">driver negligence</strong> is recovered from the driver as per a written understanding with them.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">17</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Monitoring & a backup</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Use the GPS to track the car, and always keep <strong style="color:var(--white);">one backup driver contact</strong> so a single driver leaving doesn't stop our income.</div>
+  </div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 5. PERSONAL USE -->
+<section id="personal">
+  <div class="section-label">Section 5</div>
+  <h2 class="section-title">Personal Use of the Cab</h2>
+
+  <div class="rule fade-up"><div class="rule-num">18</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Up to 5 days a year, per member</span><span class="tag core">Draft v1</span></div>
+    <div class="rule-text">Any member may use the cab for up to <strong style="color:var(--white);">5 days in a year</strong> — but it must be <strong style="color:var(--white);">told in advance and/or voted on</strong>, so it doesn't clash with bookings or another member's plan.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">19</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Who pays during personal use</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">The member using the cab covers the <strong style="color:var(--white);">fuel and any damage</strong> during their days, and avoids peak earning days (festivals, weekends) unless the group agrees. This keeps it fair to everyone.</div>
+  </div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 6. GOVERNANCE -->
+<section id="governance">
+  <div class="section-label">Section 6</div>
+  <h2 class="section-title">Decisions, Transparency & Disputes</h2>
+
+  <div class="rule fade-up"><div class="rule-num">20</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">How we decide things</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">One member, one vote. <strong style="color:var(--white);">Routine</strong> decisions need a simple majority; <strong style="color:var(--white);">big</strong> ones (selling the car, dropping the plan, adding a member, large spends) need a stronger majority — e.g. <strong style="color:var(--white);">75% agreement</strong>.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">21</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Full transparency every month</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">A simple <strong style="color:var(--white);">monthly income/expense sheet</strong> is shared with all members (e.g. in a WhatsApp group + a shared Google Sheet). All earnings go into the common account — nothing off the books.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">22</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Clear roles</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Split the work so it doesn't fall on one person: a <strong style="color:var(--white);">treasurer</strong> (accounts), an <strong style="color:var(--white);">operations lead</strong> (driver & car), and a <strong style="color:var(--white);">compliance lead</strong> (papers & renewals).</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">23</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">Settling disagreements</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Disputes are first discussed openly, then put to a vote. If we're truly deadlocked, we bring in a <strong style="color:var(--white);">neutral person we all trust</strong> to mediate before things turn sour.</div>
+  </div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 7. LEAVING / CHANGES -->
+<section id="changes">
+  <div class="section-label">Section 7</div>
+  <h2 class="section-title">Leaving, Inheritance & Changes</h2>
+
+  <div class="rule fade-up"><div class="rule-num">24</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">If a member wants to leave</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Their share is valued fairly (based on the car's worth + cash in the fund, minus loan). <strong style="color:var(--white);">Existing members get first right</strong> to buy that share before any outsider. Consider a short <strong style="color:var(--white);">6–12 month lock-in</strong> at the start so the team stays stable.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">25</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">In case of death or incapacity</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Each member names a <strong style="color:var(--white);">nominee</strong>. If something happens to a member, their share passes to the nominee, or the group buys it out at fair value — agreed kindly and in writing.</div>
+  </div></div>
+
+  <div class="rule fade-up"><div class="rule-num">26</div><div class="rule-body">
+    <div class="rule-head"><span class="rule-title">This is a living document</span><span class="tag add">Proposed</span></div>
+    <div class="rule-text">Any rule here can be <strong style="color:var(--white);">added, removed or changed</strong> by agreed vote. Each change is dated and noted, so everyone always knows the current version.</div>
+  </div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LAUNCH / REALITY CHECK (with a smile) -->
+<div style="max-width:1000px;margin:0 auto;padding:0 48px;">
+  <div style="background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(91,140,255,0.05));border:1px dashed rgba(201,168,76,0.4);border-radius:16px;padding:34px;text-align:center;">
+    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">🗓️ Launch Day · A Quick Vibe Check 😄</div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:12px;line-height:1.3;">Before You Sign —<br>Bring a Clear Mind & a Full Wallet</h3>
+    <p style="color:rgba(245,243,238,0.82);max-width:640px;margin:0 auto;font-size:14px;line-height:1.7;">We launch <strong style="color:var(--white);">mid-August</strong>, after the August salary lands 💸 — let's not start broke. Before that, sign with a clear head: only join if you can <em>happily</em> either <strong style="color:var(--white);">(a) lose this money</strong> like a bad IPL bet 🏏, or <strong style="color:var(--white);">(b) pretend it doesn't exist for at least ~6 years</strong> till the car pays you back. If both stress you out — wait, zero hard feelings. 🙂 <strong style="color:var(--gold);">Clear mind + full wallet, then we ride.</strong> 🚕✨</p>
+  </div>
+</div>
+
+<!-- SIGN OFF -->
+<div class="signoff">
+  <div class="section-label">Agreed By</div>
+  <h2 class="section-title" style="margin-bottom:8px;">We've Read & Agree</h2>
+  <p style="color:var(--muted);max-width:620px;">When everyone is happy with the final version, each member signs below (and we move it into a proper partnership deed). Add or remove boxes to match the final team size.</p>
+  <div class="sign-grid fade-up">
+    <div class="sign-box"><div class="sign-line"></div><div class="sign-cap">Member 1 · Name & Date</div></div>
+    <div class="sign-box"><div class="sign-line"></div><div class="sign-cap">Member 2 · Name & Date</div></div>
+    <div class="sign-box"><div class="sign-line"></div><div class="sign-cap">Member 3 · Name & Date</div></div>
+    <div class="sign-box"><div class="sign-line"></div><div class="sign-cap">Member 4 · Name & Date</div></div>
+    <div class="sign-box"><div class="sign-line"></div><div class="sign-cap">Member 5 · Name & Date</div></div>
+    <div class="sign-box"><div class="sign-line"></div><div class="sign-cap">Member 6 · Name & Date</div></div>
+  </div>
+  <div class="note warn fade-up" style="margin-top:28px;">⚠️ This charter is a fair starting point written for clarity, not legal advice. Before it becomes binding, put the agreed version into a <strong style="color:var(--white);">registered partnership deed</strong> and, if possible, have a lawyer review the money, ownership and exit clauses.</div>
+</div>
+
+<footer>
+  Partnership Charter · Delhi Cab Venture · Draft v1 — open to all members' feedback and change
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

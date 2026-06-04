@@ -20,12 +20,44 @@ partners, not a web app.
 
 ```
 vehical_bussiness/
-├── index.html     ← the entire proposal (HTML + CSS + JS, ~1,985 lines)
-└── CLAUDE.md      ← this file
+├── index.html                 ← Proposal 1: the main 1-car CNG fleet proposal
+├── fleet-investment-plan.html ← Proposal 2: fleet & investment plan (break-even → 10 cars)
+├── partnership-rules.html     ← Doc 3: partnership charter / founding rules (Draft v1)
+└── CLAUDE.md                  ← this file
 ```
 
 `index.html` was originally named `delhi-cab-proposal.html`; renamed to `index.html`
-so GitHub Pages (or any static host) serves it at the site root.
+so GitHub Pages (or any static host) serves it at the site root. The two HTML pages
+cross-link via their nav bars (each is self-contained — its own inlined CSS/JS).
+
+### Proposal 2 — `fleet-investment-plan.html`
+A separate, deliberately **realistic/honest** companion analysis. Same design system as
+Proposal 1. Structured in 7 sections (page-num `NN / 07`): 01 the three money questions,
+02 investment-options table, 03 capital-per-car, **04 the headline: 5-car break-even**,
+05 scale-to-10 roadmap + verdict, 06 reality check, 07 assumptions. All figures are
+rounded planning estimates, stated as such in the page. Key modelled conclusions:
+- Investment-instrument comparison (FD/RD/debt fund/gold/**equity SIP ~12% = engine**).
+- Per-car: **₹2.2 L launch cash** + ₹6 L loan @9%/5yr (EMI ₹12,450, self-paid by the car).
+  Net per car **~₹5K/mo under loan → ~₹16K/mo once its loan clears**.
+- **5-car path (cautious):** add 1 car/yr, total **₹11 L invested (₹2.2 L/partner)**;
+  **break-even ≈ Year 6** (~5.5 yrs); deepest drawdown −₹3 L (~₹60K/partner) at Year 3.
+- **10-car path (ambitious):** ~₹3 L/partner (~₹5K/mo), ~₹40 L fleet debt at peak;
+  verdict **profit** — ~₹10 L/partner over Yr 6–10 + asset share (~3–5× decade), but only
+  ~2× a passive SIP once effort/leverage/risk are priced in.
+- Recommendation: **build to 5 cars first**, push to 10 only if drivers/utilization are
+  under control by Year 3; keep a benchmark SIP running.
+- Realism baked in: replacement treadmill (~7-yr taxi life), driver-scaling as the true
+  ceiling, utilization sensitivity, leverage, possible EV-mandate capex shock.
+
+### Doc 3 — `partnership-rules.html`
+The founding **partnership charter** (Draft v1) — the rules for how 3–6 members join,
+invest, share profit, run the cab and decide things. Same design system. 26 numbered
+rules across 7 sections (Members/Ownership, Money, 6-Month Test & Exit, Operations,
+Personal Use, Governance, Leaving/Changes) + a sign-off block. Each rule is tagged
+**`Draft v1`** (the user's original 9 rules) or **`Proposed`** (additions I suggested for
+fairness — voting/transparency/roles/exit/capital-calls etc., to be ratified by the group).
+Framed as a living, changeable document; ends with a disclaimer to formalize in a
+registered partnership deed (not legal advice). User will gather members' feedback.
 
 ## Page sections (in document order)
 
