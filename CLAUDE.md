@@ -77,7 +77,10 @@ registered partnership deed (not legal advice). User will gather members' feedba
 8. `#licenses` (06/06) — permits, licenses, document checklists.
 9. `#timeline` — 30-day launch roadmap.
 10. Risks — driver, accident, app commission, partner disputes.
-11. `#models` — 3 operation models (Own Driver / Own Driver+Incentive / Rent-to-Driver).
+11. `#models` — 3 operation models (Own Driver / Own Driver+Incentive / Rent-to-Driver)
+    + a "Rent-to-Driver ₹1,000–1,200/day" math block: owner fixed cost ₹20K/mo
+    (EMI+maint+insurance+misc), break-even ~17–20 rented days, ~₹10K/mo profit at
+    ₹1,200×25 days (₹2K/partner) → ~₹22.5K/mo after loan cleared. Beats own-driver.
 12. Closing + footer.
 
 > Note: page numbers are hand-written labels (`01/06` … `06/06`). The EV section uses
