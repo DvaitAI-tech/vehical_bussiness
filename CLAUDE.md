@@ -38,9 +38,10 @@ Proposal 1. Structured in 7 sections (page-num `NN / 07`): 01 the three money qu
 rounded planning estimates, stated as such in the page. Key modelled conclusions:
 - Investment-instrument comparison (FD/RD/debt fund/gold/**equity SIP ~12% = engine**).
 - Per-car: **₹2.2 L launch cash** + ₹6 L loan @9%/5yr (EMI ₹12,450, self-paid by the car).
-  Net per car **~₹5K/mo under loan → ~₹16K/mo once its loan clears**.
+  Net per car **(incl. ~₹2,000/mo parking) ~₹3K/mo under loan → ~₹14K/mo once its loan clears**.
 - **5-car path (cautious):** add 1 car/yr, total **₹11 L invested (₹2.2 L/partner)**;
-  **break-even ≈ Year 6** (~5.5 yrs); deepest drawdown −₹3 L (~₹60K/partner) at Year 3.
+  **break-even ≈ Year 7** (~6.5 yrs); deepest drawdown −₹5.6 L (~₹1.12 L/partner) at Year 5.
+  (Parking pushed break-even out ~1 yr & deepest hole from Yr 3 to Yr 5 — thin margins.)
 - **10-car path (ambitious):** ~₹3 L/partner (~₹5K/mo), ~₹40 L fleet debt at peak;
   verdict **profit** — ~₹10 L/partner over Yr 6–10 + asset share (~3–5× decade), but only
   ~2× a passive SIP once effort/leverage/risk are priced in.
@@ -61,14 +62,15 @@ registered partnership deed (not legal advice). User will gather members' feedba
 
 ## Page sections (in document order)
 
-1. **Hero** — headline + key stats (₹1.6L/partner, ₹970/mo Y1 return, 5 cars Y3).
+1. **Hero** — headline + key stats (₹1.6L/partner, ₹570/mo Y1 return, 5 cars Y3).
 2. `#opportunity` (01/06) — market size, online-booking %, CNG fuel savings.
 3. `#car` (02/06) — **vehicle choice: Maruti WagonR Tour CNG** (~₹7–7.5L, 34 km/kg).
    Rejects Alto (too small), Dzire (pricier), Innova (too costly to start).
 4. `#ev` (02B · ALTERNATIVE) — **EV-vs-CNG comparison** (Tata Xpres-T EV). Added later.
    Head-to-head table, cash-flow delta, 4 EV-specific risk cards, CNG-vs-EV verdict.
 5. `#investment` (03/06) — ₹46K/partner upfront, ₹6L loan, EMI ₹12,450/mo, bank options.
-6. `#profit` (04/06) — monthly P&L: ₹96K revenue, ₹4,850 net (₹970/partner), 2-shift model.
+6. `#profit` (04/06) — monthly P&L: ₹96K revenue, ₹93,150 cost (incl. ₹2,000 parking),
+   ₹2,850 net (₹570/partner), 2-shift model.
 7. Growth plan (05/06) — 1 car (Y1) → 8 cars (Y5).
 8. `#licenses` (06/06) — permits, licenses, document checklists.
 9. `#timeline` — 30-day launch roadmap.
