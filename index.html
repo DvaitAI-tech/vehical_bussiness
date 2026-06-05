@@ -1011,6 +1011,7 @@
     <li><a href="#ev">EV Option</a></li>
     <li><a href="#investment">Investment</a></li>
     <li><a href="#profit">Returns</a></li>
+    <li><a href="#cost">Cost/Hr</a></li>
     <li><a href="#models">Strategy</a></li>
     <li><a href="#timeline">Roadmap</a></li>
     <li><a href="fleet-investment-plan.html" style="color:var(--gold);">10-Car Plan →</a></li>
@@ -1541,6 +1542,72 @@
         <div class="pp-desc">Per car, per partner</div>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RUNNING COST & FARE COMPARISON -->
+<section id="cost">
+  <div class="page-num">04B · COST BASIS</div>
+  <div class="section-label">Cost & Fare Reality</div>
+  <h2 class="section-title">What It Costs to Run<br>vs What We Can Charge</h2>
+  <p class="section-desc">Profit aside — here's the raw cost to keep the cab on the road each km and hour, and how it stacks up against Delhi's government meter rate and Uber/Ola fares.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px;" class="fade-up">
+    <div style="background:var(--dark2);border:1px solid rgba(201,168,76,0.2);border-radius:14px;padding:24px;text-align:center;">
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Per Kilometre</div>
+      <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold);">₹12.3</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:4px;">full running cost / km</div>
+    </div>
+    <div style="background:var(--dark2);border:1px solid rgba(201,168,76,0.2);border-radius:14px;padding:24px;text-align:center;">
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Per Hour</div>
+      <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold);">₹153</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:4px;">~16 service hrs/day</div>
+    </div>
+    <div style="background:var(--dark2);border:1px solid rgba(201,168,76,0.2);border-radius:14px;padding:24px;text-align:center;">
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Per Day</div>
+      <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold);">₹2,455</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:4px;">200 km/day, 2 drivers</div>
+    </div>
+  </div>
+
+  <div class="fade-up" style="overflow-x:auto;margin-bottom:16px;">
+    <table class="scale-table">
+      <thead>
+        <tr><th>Cost layer (no profit, no commission)</th><th>Per km</th><th>Per hour</th><th>Per day</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fuel only (CNG @ 34 km/kg)</td><td class="mono">₹2.2</td><td class="mono">~₹55*</td><td class="mono">₹440</td></tr>
+        <tr><td>Operating cost (drivers, fuel, maint., insurance, parking — no EMI)</td><td class="mono">₹10.2</td><td class="mono">₹128</td><td class="mono">₹2,040</td></tr>
+        <tr style="background:rgba(201,168,76,0.06);"><td style="font-weight:600;color:var(--white);">Full cost incl. EMI</td><td class="mono gold" style="font-weight:600;">₹12.3</td><td class="mono gold" style="font-weight:600;">₹153</td><td class="mono gold" style="font-weight:600;">₹2,455</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px;color:var(--muted);margin-bottom:40px;">* fuel per <em>driving</em> hour at ~25 km/h. Driver salary &amp; EMI are fixed — the more the car runs, the lower the cost per km falls. Idle days are the enemy.</p>
+
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:8px;">Govt Meter vs Uber/Ola — Per Hour</h3>
+  <p class="section-desc" style="margin-bottom:24px;">What a customer pays per occupied hour (~25 km), and what we actually keep after commission and our ₹153/hr cost. Assumes the car earns on ~53% of its on-duty hours.</p>
+
+  <div class="fade-up" style="overflow-x:auto;">
+    <table class="scale-table">
+      <thead>
+        <tr><th>Per occupied hour (~25 km)</th><th>🏛️ Govt Meter (non-AC)</th><th>🚕 Uber / Ola (Go/Mini)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Charged per km</td><td class="mono">₹15 (₹16 AC)</td><td class="mono">~₹12</td></tr>
+        <tr><td>Charged per minute</td><td class="mono" style="color:var(--muted);">waiting only</td><td class="mono">~₹1.25/min</td></tr>
+        <tr><td>Gross fare / occupied hour</td><td class="mono">~₹375</td><td class="mono">~₹375</td></tr>
+        <tr><td>Platform commission</td><td class="mono green">None — keep 100%</td><td class="mono" style="color:var(--red);">~20% (−₹75)</td></tr>
+        <tr><td>You keep / occupied hour</td><td class="mono">₹375</td><td class="mono">₹300</td></tr>
+        <tr><td>× ~53% real occupancy</td><td class="mono">₹199/hr</td><td class="mono">₹159/hr</td></tr>
+        <tr style="background:rgba(201,168,76,0.06);"><td style="font-weight:600;color:var(--white);">− running cost ₹153/hr =</td><td class="mono green" style="font-weight:600;">+₹46/hr</td><td class="mono gold" style="font-weight:600;">+₹6/hr</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:20px;padding:16px 20px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:10px;font-size:13px;color:var(--muted);">
+    💡 <strong style="color:var(--white);">The catch:</strong> the meter <em>looks</em> better (no 20% cut), but a plain black-yellow taxi can't fill 53% of its hours without app demand — it sits idle. <strong style="color:var(--white);">Uber/Ola take 20% but deliver the riders</strong>, so they win on total monthly earnings. Either way, profit is a wafer-thin <strong style="color:var(--gold);">~₹6/hour</strong> after everything — utilisation and low costs decide if we make money. <span style="color:rgba(245,243,238,0.5);">(Rates approximate, Delhi 2026; verify current meter &amp; app fares.)</span>
   </div>
 </section>
 

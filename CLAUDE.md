@@ -71,6 +71,8 @@ registered partnership deed (not legal advice). User will gather members' feedba
 5. `#investment` (03/06) — ₹46K/partner upfront, ₹6L loan, EMI ₹12,450/mo, bank options.
 6. `#profit` (04/06) — monthly P&L: ₹96K revenue, ₹93,150 cost (incl. ₹2,000 parking),
    ₹2,850 net (₹570/partner), 2-shift model.
+6b. `#cost` (04B) — running-cost basis (₹12.3/km, ₹153/hr, ₹2,455/day, profit excluded)
+    + Delhi Govt-meter vs Uber/Ola per-hour fare comparison (~₹6/hr real margin).
 7. Growth plan (05/06) — 1 car (Y1) → 8 cars (Y5).
 8. `#licenses` (06/06) — permits, licenses, document checklists.
 9. `#timeline` — 30-day launch roadmap.
