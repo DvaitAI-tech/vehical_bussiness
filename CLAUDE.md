@@ -23,6 +23,7 @@ vehical_bussiness/
 ├── index.html                 ← Proposal 1: the main 1-car CNG fleet proposal
 ├── fleet-investment-plan.html ← Proposal 2: fleet & investment plan (break-even → 10 cars)
 ├── partnership-rules.html     ← Doc 3: partnership charter / founding rules (Draft v1)
+├── rental-platforms-research.html ← Doc 4: research note — where to rent the car out
 └── CLAUDE.md                  ← this file
 ```
 
@@ -59,6 +60,15 @@ Personal Use, Governance, Leaving/Changes) + a sign-off block. Each rule is tagg
 fairness — voting/transparency/roles/exit/capital-calls etc., to be ratified by the group).
 Framed as a living, changeable document; ends with a disclaimer to formalize in a
 registered partnership deed (not legal advice). User will gather members' feedback.
+
+### Doc 4 — `rental-platforms-research.html`
+A research note (web-searched June 2026) on platforms/channels to rent the car to a
+driver on daily rent (~₹1,000–1,200/day): Ola "Attach My Car"/Operator (best fit, lease
+₹700–1,150/day), Uber Fleet Partner, Everest Fleet (benchmark — they own cars), and the
+informal local driver networks/FB groups (where most ₹1,000–1,200/day deals actually
+happen). Flags Zoomcar/Revv/Myles as the *wrong* (self-drive) model. Includes a
+requirements/safeguards section (yellow plate, commercial insurance, deposit, written
+agreement, GPS) and a Sources list. Same design system; cross-linked from index nav.
 
 ## Page sections (in document order)
 
